@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.oracle.mapper.MedMapper">
+
+<resultMap id="mohuMap" type="com.oracle.entity.Medicine">
+<id property="mid" column="mid"/>
+
+</resultMap>
+
+<select id = "selectmed" parameterType="com.oracle.entity.Medicine" resultType="com.oracle.entity.Medicine">
+   select * From t_medicine
+</select>
+   <delete id="deletemed" parameterType="java.lang.Integer">
+      delete from t_medicine WHERE  mid =#{mid}
+   </delete>
+
+   <insert id = "addmed" parameterType="com.oracle.entity.Medicine" >
+      insert into t_medicine (mid, mname,mcount,maddress,kid) VALUES(#{mid},#{mname},#{mcount},#{maddress},#{kid})
+   </insert>
+ <select id = "mohuselect" parameterType="com.oracle.entity.Medicine" resultType="com.oracle.entity.Medicine">
+       select * from t_medicine where 1=1
+       <if test="mname!=null and mname!=''">
+          and mname LIKE  CONCAT('%',#{mname},'%')
+       </if>
+ </select>
+</mapper>
