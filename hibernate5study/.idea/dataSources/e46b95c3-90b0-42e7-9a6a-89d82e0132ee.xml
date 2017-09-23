@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="hibernate1704@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="hibernate1704">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="bigeshop"/>
+    <schema id="4" parent="1" name="cdcol"/>
+    <schema id="5" parent="1" name="db1"/>
+    <schema id="6" parent="1" name="eshop"/>
+    <schema id="7" parent="1" name="hibernate"/>
+    <schema id="8" parent="1" name="information_schema"/>
+    <schema id="9" parent="1" name="java1704"/>
+    <schema id="10" parent="1" name="mybatis"/>
+    <schema id="11" parent="1" name="mybatis1704"/>
+    <schema id="12" parent="1" name="mysql"/>
+    <schema id="13" parent="1" name="performance_schema"/>
+    <schema id="14" parent="1" name="phpmyadmin"/>
+    <schema id="15" parent="1" name="school"/>
+    <schema id="16" parent="1" name="shoppingdemo"/>
+    <schema id="17" parent="1" name="taobaodb"/>
+    <schema id="18" parent="1" name="test"/>
+    <schema id="19" parent="1" name="web1613"/>
+    <schema id="20" parent="1" name="webauth"/>
+    <table id="21" parent="2" name="events"/>
+    <table id="22" parent="2" name="order"/>
+    <column id="23" parent="21" name="EVENT_ID">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="24" parent="21" name="EVENT_DATE">
+      <Position>2</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="25" parent="21" name="title">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="26" parent="21" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>EVENT_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="27" parent="22" name="orderid">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="28" parent="22" name="orderprice">
+      <Position>2</Position>
+      <DataType>double(10,2)|0</DataType>
+    </column>
+    <column id="29" parent="22" name="ordertime">
+      <Position>3</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <key id="30" parent="22" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>orderid</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
